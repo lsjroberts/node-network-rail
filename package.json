@@ -11,6 +11,10 @@
   "author": "Laurence Roberts <lsjroberts@outlook.com>",
   "license": "MIT",
   "dependencies": {
-
+    "colors": "^0.6.2",
+    "nomnom": "^1.8.0",
+    "q": "^1.0.1",
+    "stomp-client": "^0.5.0",
+    "underscore": "^1.6.0"
   }
 }

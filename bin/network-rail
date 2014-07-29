@@ -1,0 +1,118 @@
+#!/usr/bin/env node
+
+var parser = require('nomnom')
+  , colors = require('colors')
+  , _ = require('underscore')
+  , rail = require('../index')
+  , prettyjson = require('prettyjson')
+;
+
+colors.setTheme({
+    title: 'blue',
+    label: 'green',
+    info: 'white',
+    warn: 'yellow',
+    error: 'red',
+});
+
+parser.command('movements')
+    .option('time', {
+        'abbr': 't',
+    })
+    .option('user', {
+        'abbr': 'u',
+        'required': true,
+    })
+    .option('pass', {
+        'abbr': 'p',
+        'required': true,
+    });
+
+parser.command('delays')
+    .option('time', {
+        'abbr': 't',
+    })
+    .option('user', {
+        'abbr': 'u',
+        'required': true,
+    })
+    .option('pass', {
+        'abbr': 'p',
+        'required': true,
+    });
+
+parser.command('location')
+    .option('stanox', {
+        'abbr': 's',
+    })
+    .option('name', {
+        'abbr': 'n',
+    });
+
+var opts = parser.parse();
+
+// console.log(opts);
+
+switch (opts[0]) {
+    case 'movements':
+        rail.feeds.connect(opts.user, opts.pass);
+
+        rail.movements.listen(function(movements) {
+            Object.keys(movements).forEach(function(type) {
+                console.log('');
+                console.log(type.title);
+                movements[type].forEach(function(movement) {
+                    console.log('\tTrain:'.label, movement.trainID.label);
+                    console.log('\t\tTimestamp:'.info, (movement.timestamp) ? movement.timestamp.info : 'unknown'.warn);
+                    console.log('\t\tCompany:'.info, (movement.company) ? movement.company.info : 'unknown'.warn);
+                    console.log('\t\tStation:'.info, (movement.station) ? movement.station.info : 'unknown'.warn);
+                    console.log('\t\tStation Code:'.info, (movement.stationCode) ? movement.stationCode.info : 'unknown'.warn);
+                    console.log('\t\tDelay:'.info, (movement.timetableVariation) ? movement.timetableVariation.info : 'unknown'.warn, 'minutes');
+                });
+            });
+        });
+
+        setTimeout(function() {
+            rail.feeds.disconnect();
+        }, opts.time || 2000);
+    break;
+
+    case 'delays':
+        var delays = {};
+
+        rail.feeds.connect(opts.user, opts.pass);
+
+        rail.movements.listen(function(movements) {
+            console.log('\u001B[2J\u001B[0;0f');
+            console.log('Updating at'.title, (Date.now()+'').title);
+
+            Object.keys(movements).forEach(function(type) {
+                movements[type].forEach(function(movement) {
+                    if (movement.timetableVariation > 10) {
+                        delays[movement.trainID] = movement;
+                    } else if (_.has(delays, movement.trainID)) {
+                        delete delays[movement.trainID];
+                    }
+                });
+            });
+
+            Object.keys(delays).forEach(function(trainID) {
+                movement = delays[trainID];
+
+                console.log('Delay at', (movement.station) ? movement.station.info : 'unknown'.warn, 'of', (movement.timetableVariation) ? movement.timetableVariation.info : 'unknown'.warn, 'minutes');
+            });
+        });
+
+        setTimeout(function() {
+            rail.feeds.disconnect();
+        }, opts.time || 60000);
+    break;
+
+    case 'location':
+        var searches = {};
+        if (opts.stanox) searches.stanox = opts.stanox;
+        if (opts.name) searches.nlcdesc = opts.name;
+        locations = rail.reference.findLocations(searches);
+        console.log(prettyjson.render(locations));
+    break;
+}
