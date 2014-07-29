@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Network Rail Data Feeds",
   "homepage": "https://github.com/lsjroberts/node-network-rail",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lsjroberts/node-network-rail.git"
+  },
   "bugs": "https://github.com/lsjroberts/node-network-rail/issues",
   "main": "index.js",
   "bin": {
@@ -14,6 +18,9 @@
     "trains"
   ],
   "author": "Laurence Roberts <lsjroberts@outlook.com>",
+  "contributors": [
+    "Laurence Roberts <lsjroberts@outlook.com"
+  ],
   "license": "MIT",
   "dependencies": {
     "colors": "^0.6.2",
