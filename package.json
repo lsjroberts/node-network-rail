@@ -1,0 +1,16 @@
+{
+  "name": "network-rail",
+  "version": "0.0.0",
+  "description": "Network Rail Data Feeds",
+  "main": "index.js",
+  "keywords": [
+    "network rail",
+    "rail",
+    "trains"
+  ],
+  "author": "Laurence Roberts <lsjroberts@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+
+  }
+}
