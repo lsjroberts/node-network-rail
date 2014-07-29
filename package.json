@@ -2,7 +2,12 @@
   "name": "network-rail",
   "version": "0.0.0",
   "description": "Network Rail Data Feeds",
+  "homepage": "https://github.com/lsjroberts/node-network-rail",
+  "bugs": "https://github.com/lsjroberts/node-network-rail/issues",
   "main": "index.js",
+  "bin": {
+    "network-rail": "./bin/network-rail"
+  },
   "keywords": [
     "network rail",
     "rail",
