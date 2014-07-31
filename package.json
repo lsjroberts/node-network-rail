@@ -1,6 +1,6 @@
 {
   "name": "national-rail",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "National Rail API",
   "main": "index.js",
   "keywords": [
@@ -10,7 +10,5 @@
   ],
   "author": "Laurence Roberts <lsjroberts@outlook.com>",
   "license": "MIT",
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
