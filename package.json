@@ -1,6 +1,6 @@
 {
   "name": "national-rail",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "National Rail API",
   "main": "index.js",
   "keywords": [
