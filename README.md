@@ -37,7 +37,3 @@ rail.???.status({
 ```
 
 The function passed into `then()` will be called asynchronously once the request to the api has returned and been processed.
-
-### Services
-
-...
