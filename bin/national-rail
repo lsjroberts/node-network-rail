@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+var parser = require('nomnom')
+  , colors = require('colors')
+  , nr = require('../index');
+
+colors.setTheme({
+    title: 'blue',
+    label: 'green',
+    info: 'white',
+    warn: 'yellow',
+    error: 'red',
+});
+
+parser.command('journey')
+    .option('from', {
+        abbr: 'f',
+        help: 'Station from which you are travelling',
+    })
+    .option('to', {
+        abbr: 't',
+        help: 'Station to which you are travelling',
+    });
+
+parser.command('station')
+    .option('name', {
+        abbr: 'n',
+        help: 'Name of a station',
+    });
+
+var opts = parser.parse();
+
+// console.log(opts);
+
+switch (opts[0]) {
+
+}
