@@ -1,3 +1,5 @@
 module.exports = {
-    'train': require('./lib/train')
+    'feeds': require('./lib/feeds'),
+    'movements': require('./lib/movements'),
+    'reference': require('./lib/reference'),
 };
