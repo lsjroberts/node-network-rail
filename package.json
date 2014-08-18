@@ -1,6 +1,6 @@
 {
   "name": "network-rail",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Network Rail Data Feeds",
   "homepage": "https://github.com/lsjroberts/node-network-rail",
   "repository": {
