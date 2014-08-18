@@ -4,6 +4,166 @@
             "name": "Arriva Trains Wales",
             "business": "HL",
             "atoc": "AW"
+        },
+        "79": {
+            "name": "c2c",
+            "business": "HT",
+            "atoc": "CC"
+        },
+        "74": {
+            "name": "Chiltern Railway",
+            "business": "HO",
+            "atoc": "CH"
+        },
+        "27": {
+            "name": "CrossCountry",
+            "business": "EH",
+            "atoc": "XC"
+        },
+        "34": {
+            "name": "Devon and Cornwall Railway",
+            "business": "EN",
+            "atoc": "DC"
+        },
+        "28": {
+            "name": "East Midlands Trains",
+            "business": "EM",
+            "atoc": "EM"
+        },
+        "61": {
+            "name": "East Coast",
+            "business": "HB",
+            "atoc": "GR"
+        },
+        "06": {
+            "name": "Eurostar",
+            "business": "GA",
+            "atoc": "ES"
+        },
+        "26": {
+            "name": "First Capital Connect",
+            "business": "EG",
+            "atoc": "FC"
+        },
+        "25": {
+            "name": "First Great Western",
+            "business": "EF",
+            "atoc": "GW"
+        },
+        "55": {
+            "name": "First Hull Trains",
+            "business": "PF",
+            "atoc": "HT"
+        },
+        "60": {
+            "name": "First Scotrail",
+            "business": "HA",
+            "atoc": "SR"
+        },
+        "20": {
+            "name": "First Transpennine Express",
+            "business": "EA",
+            "atoc": "TP"
+        },
+        "81": {
+            "name": "Gatwick Express",
+            "business": "HV",
+            "atoc": "GX"
+        },
+        "22": {
+            "name": "Grand Central",
+            "business": "EC",
+            "atoc": "GC"
+        },
+        "24": {
+            "name": "Heathrow Connect",
+            "business": "EE",
+            "atoc": "HC"
+        },
+        "86": {
+            "name": "Heathrow Express",
+            "business": "HM",
+            "atoc": "HX"
+        },
+        "85": {
+            "name": "Island Lines",
+            "business": "HZ",
+            "atoc": "IL"
+        },
+        "29": {
+            "name": "London Midland",
+            "business": "EJ",
+            "atoc": "LM"
+        },
+        "30": {
+            "name": "London Overground",
+            "business": "EK",
+            "atoc": "LO"
+        },
+        "91": {
+            "name": "LUL Bakerloo Line",
+            "business": "XC",
+            "atoc": "LT"
+        },
+        "90": {
+            "name": "LUL District Line - Wimbledon",
+            "business": "XB",
+            "atoc": "LT"
+        },
+        "93": {
+            "name": "LUL District Line - Richmond",
+            "business": "XE",
+            "atoc": "LT"
+        },
+        "64": {
+            "name": "Merseyrail",
+            "business": "HE",
+            "atoc": "ME"
+        },
+        "21": {
+            "name": "Greater Anglia",
+            "business": "EB",
+            "atoc": "LE"
+        },
+        "56": {
+            "name": "Nexus (Tyne & Wear Metro)",
+            "business": "PG",
+            "atoc": "TW"
+        },
+        "51": {
+            "name": "North Yorkshire Moors Railway",
+            "business": "PR",
+            "atoc": "NY"
+        },
+        "23": {
+            "name": "Northern Rail",
+            "business": "ED",
+            "atoc": "NT"
+        },
+        "84": {
+            "name": "South West Trains",
+            "business": "HY",
+            "atoc": "SW"
+        },
+        "80": {
+            "name": "Southeastern",
+            "business": "HU",
+            "atoc": "SE"
+        },
+        "82": {
+            "name": "Southern",
+            "business": "HW",
+            "atoc": "SN"
+        },
+        "65": {
+            "name": "Virgin Trains",
+            "business": "HF",
+            "atoc": "VT"
+        },
+        "50": {
+            "name": "West Coast Railway Co.",
+            "business": "PA",
+            "atoc": "WR"
         }
     }
 }
